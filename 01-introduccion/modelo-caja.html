@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin:0;
+        }
+        .container {
+            background-color: lightgray;
+            height: 100vh;
+        }
+
+        .item{
+            background-color: lightpink;
+        }
+
+        .item:nth-of-type(2) {
+            margin:10px;
+            width: 400px;
+        }
+
+        .item:nth-of-type(3) {
+            margin:10px;
+            width: 400px;
+            height: 100px;
+        }
+
+        .item:nth-of-type(4) {
+            margin:10px;
+            width: 400px;
+            height: 100px;
+            padding: 10px;
+        }
+
+        .item:nth-of-type(5) {
+            margin:10px;
+            width: 400px;
+            height: 100px;
+            padding: 10px;
+            border: 5px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Sin estilos de box model</div>
+        <div class="item">margin:10px<br>width: 400px</div>
+        <div class="item">margin:10px<br>width: 400px<br>height: 100px</div>
+        <div class="item">margin:10px<br>width: 400px<br>height: 100px<br>padding: 10px</div>
+        <div class="item">margin:10px<br>width: 400px<br>height: 100px<br>padding: 10px<br> border: 5px solid black</div>  
+    </div>
+</body>
+</html>
