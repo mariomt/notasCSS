@@ -1,0 +1,27 @@
+html,body {
+    margin: 0;
+    height: 100%;
+}
+.item {
+    display: flex;
+    border: 1px solid;
+    align-items: center;
+    justify-content: center;
+    background-color: brown;
+}
+
+.item:nth-of-type(4) {
+    background-color: blue;
+    display: subgrid;
+}
+
+.grid {
+    display: grid;
+    height: 100%;
+    /*Explicit grid*/
+    grid-template-columns: 55% 15% 15%;
+    grid-template-rows: 33% 33% 33%;
+
+    /*El implicit grid son los elementos que no se tomaron en cuenta
+    pero agarran valores por defecto automaticamente*/
+}
