@@ -20,6 +20,24 @@ A continuación te menciono algunos de los temas que deberías aprender para pod
 - **Atributos**
 - **pseudo-clases**
 
+- **Agrupados:** 
+Por ejemplo `p, h1{ propiedad: valor}`
+
+- **Descendientes:** (hijos)
+Por ejemplo `header  h1 { propiedad:valor }` (no es recomendable utilizarlo).
+
+- **hijo directo**
+Por ejemeplo `header > h1 { propiedad:valor } `
+
+- **Hermano siguiente:**
+Por ejemplo `.title + .subtitle { propiedad:valor }`
+
+- **Hermanos siguientes:**
+Por ejemplo `.hermano-mayor ~ .hermano { propiedad:valor }`
+
+
+
+
 También contamos con los selectores compuestos los cuales como su nombre lo indica son selectores que se componen de varios selectores...
 
 ### Modelo de Caja
@@ -60,3 +78,16 @@ Para leer y comprender mejor este tema podemos visitar el siguiente [enlace](htt
 >**rem** El tamaño es respecto al tamaño de la raíz o body.
 >**em** El tamaño es respecto a la fuente de su contenedor padre.
 >**vmin y vmax** Es respecto al porcentaje de la dimensión mas grande o más pequeña según lo indicado.
+
+
+### Variables
+Las variables css nos permiten almacenar valores para despues utilizarlo en las propiedades, con la finalidad de agrupar un conjunto de parametros en una sola variable y asi cuando tengamos que hacer un cambio en lugar de hacerlo en varias propiedades solo se hará el cambio en la variable.
+
+### Especificidad
+
+
+### Herencia
+
+
+### Cascada
+
