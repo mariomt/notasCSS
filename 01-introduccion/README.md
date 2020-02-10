@@ -18,7 +18,7 @@ A continuación te menciono algunos de los temas que deberías aprender para pod
 - **Clases**
 - **Identificadores**
 - **Atributos**
-- **pseudo-clases**
+- **pseudo-clases** (Estos selectores se muestran más adelante).
 
 - **Agrupados:** 
 Por ejemplo `p, h1{ propiedad: valor}`
