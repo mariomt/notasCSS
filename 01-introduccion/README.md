@@ -85,9 +85,36 @@ Las variables css nos permiten almacenar valores para despues utilizarlo en las 
 
 ### Especificidad
 
-
 ### Herencia
 
-
 ### Cascada
+
+
+### Pseudoclases
+
+- **:root** Esta es una pseudoclase que hace referencia al html, con la diferencia que tiene mayor especificidad. Normalmente dentro de esta pseudoclase se colocan las variables del sitio.
+- **:link** Esta pseudoclase es la que tienen por defecto las etiquetas a el cual hace que la etiqueta se vea de color azul.
+- **:visited** De igual manera que la anterior la utilizan las etiquetas de ancla pero esta nos indica cuando el link ya fue visitado (cuando el color cambia a uno más obscuro).
+- **:hover** Esta pseudoclase se hace presente cuando nuestro puntero pasa sobre un elemento.
+- **:active** Se hace presente cuando hacemos click sobre un elemento (solo cuando se presiona, cuando se deja de presionar esta pseudoclase deja de estar activa).
+
+Las cuatro pseudoclases anteriores deben utilizarse en el orden que se muestran ya que si no se hace así, los estilos no se aplicarán.
+- **:target** Representa un elemento único, si existe alguno, con id coincidentes con el identificador de fragmentos de la URI del documento.
+
+- **:nth-child** Selecciona el elemento indicado que sea el enésimo hijo de su elemento padre.
+- **:first-child** Selecciona el elemento indicado que sea el primer hijo de su elemento padre.
+- **:last-child** Selecciona el elemento indicado que sea el último hijo de su elemento padre.
+
+- **:nth-of-type :first-of-type :last-of-type**
+
+- **:not** Pseudoclase de negación, :not(X), es una notación funcional que tomará un selector simple X como argumento.
+
+- **:empty** Corresponde a un elemento sin ningun nodo hijo.
+
+### Pseudoelementos
+
+- **::first-line | ::first-letter** Solo funcionan para elementos de bloque y selecciona la primera letra o la primera línea.
+
+
+- **::before | ::after** Contenido generado (debes generar contenido para que se visualice), por defecto con display inline (son como si fueran hijos).
 
