@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pseudoclase-Target</title>
+</head>
+<style>
+  body{
+    padding-bottom: 200rem;
+  }
+  .modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    justify-content: center;
+    align-items: center;
+    display: none;
+  }
+
+  .modal:target {
+    display: flex;
+  }
+
+  .modal-box {
+    background-color: wheat;
+    width: 50%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+</style>
+<body>
+  <a href="#modal">Modal con CSS</a>
+
+  <div id="modal" class="modal">
+    <aside class="modal-box">
+      <h2>Hola soy una Modal con CSS</h2>
+      <a href="#">Cerrar</a>
+    </aside>
+  </div>
+</body>
+</html>
