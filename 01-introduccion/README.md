@@ -84,10 +84,13 @@ Para leer y comprender mejor este tema podemos visitar el siguiente [enlace](htt
 Las variables css nos permiten almacenar valores para despues utilizarlo en las propiedades, con la finalidad de agrupar un conjunto de parametros en una sola variable y asi cuando tengamos que hacer un cambio en lugar de hacerlo en varias propiedades solo se hará el cambio en la variable.
 
 ### Especificidad
+Es la manera mediante la cual los navegadores deciden qué valores de una propiedad CSS son más relevantes para un elemento.
 
 ### Herencia
+Algunos valores de las propiedades css que han establecido para los elementos padres los heredan elementos hijos, pero otros no.
 
 ### Cascada
+Cuando dos reglas tienen la misma especificidad, se aplica la que viene en último lugar en el CSS. En otras palabras habra momentos en que el orden de las reglas CSS importen y otros donde no.
 
 
 ### Pseudoclases
