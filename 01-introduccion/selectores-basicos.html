@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores</title>
+    <style>
+        
+
+        /*SELECTOR DE ELEMENTO*/
+        h1 {
+            text-align: center;
+            font-size: 3em;
+        }
+        /*SELECTOR DE ELEMENTO*/
+        /*En este caso seleccionamos todos los elementos p y le aplicamos los siguientes estilos*/
+        p {
+            font-size: 1.3em;
+        }
+        /*SELECTOR DE ELEMENTO*/
+        /*Seleccionamos los articles y le aplicamos un color de fondo y ponemos un padding*/
+        article {
+            background-color: lightblue;
+            padding: 2em 1em;
+        }
+
+        /*SELECTOR DE CLASE*/
+        /*Cambiamos el color de fondo del article con la clase indicada*/
+        .articulo {
+            background-color: lightcoral;
+        }
+
+        /*SELECTOR DE ID*/
+        /*Cambiamos el color de fondo del article con id indicado*/
+        #miArticulo {
+            background-color: lightgreen;
+        }
+        
+        /*SELECTOR DE ATRIBUTO*/
+        /*seleccionamos la etiqueta que tenga la propiedad href y colocamos los estilos pertinentes*/
+        [href] {
+            padding: 1em;
+            background-color: lightcoral;
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Selectores</h1>
+    
+    <article>
+        <h2>Selector de Elemento</h2>
+        <p>Selecciona un elemento html indicandolo con el nombre de su etiqueta</p>
+    </article>
+    
+    <article class="articulo">
+        <h2>Selector de Clase</h2>
+        <p>Selecciona un elemento html indicandolo con el nombre de su atributo de clase</p>
+    </article>
+
+    <article id="miArticulo">
+        <h2>Selector de Clase</h2>
+        <p>Selecciona un elemento html indicandolo con el nombre de su atributo de id</p>
+    </article>
+
+    <article>
+        <h2>Selector de Atributo</h2>
+        <p>Selecciona un elemento html indicandolo con el nombre de su atributo y/ó valor del mismo.</p>
+        <a href="#">Link</a>
+    </article>
+
+</body>
+</html>
