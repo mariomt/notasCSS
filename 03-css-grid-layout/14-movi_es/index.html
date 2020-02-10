@@ -1,0 +1,109 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Movi.es</title>
+        <script src="https://use.fontawesome.com/0e44266c9b.js"></script>
+    </head>
+    <style>
+        :root {
+            --header-height: 50px;
+        }
+        body {
+            margin:0;
+        }
+        .container {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            grid-template-rows: var(--header-height) 1fr;
+            grid-template-areas:"header header" 
+                                "aside main"
+                                "aside main"
+                                "aside main";
+        }
+
+        header {
+            grid-area: header;
+
+            box-shadow: 0 1px 8px -1px rgba(0, 0, 0, 0.5);
+        }
+
+        header h1 {
+            margin: 0;
+            line-height: var(--header-height);
+        }
+        aside {
+            grid-area: aside;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-top: 30px;
+            background-color: lightcoral;
+        }
+
+        aside p{
+            margin: 0 0 20px 0;
+            text-align: center;
+            color: white;
+            font-size: 0.8rem;
+
+        }
+        aside div i{
+            text-align: center;
+            width: 100%;
+            color: white;
+            margin-bottom: 8px;
+        }
+        .fa {
+            font-size: 1.4rem;
+        }
+        main {
+            grid-area: main;    
+        }
+
+        .wraper{
+            display: grid;
+            height: 90%;
+            width: 80%;
+            grid-template-rows: repeat(3, 20px 1fr);
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px 25px;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .box img {
+            width: 100%;
+        }
+
+
+    </style>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Movi.es</h1>
+            </header>
+            <aside>
+                <div class="superior">
+                    <i class="fa fa-home"></i><p>Home</p>
+                    <i class="fa fa-fire"></i><p>Trending</p>
+                    <i class="fa fa-heart"></i><p>Más Likes</p>
+                </div>
+
+                <div class="inferior">
+                    <i class="fa fa-cog"></i><p>Ajustes</p>
+                </div>
+            </aside>
+            <main>
+                <div class="wraper">
+                    <div class="title"><h3>Ahora en Cine</h3></div>
+                    <div class="box">
+                        <img src="../../../wordpress-theme/blogmario/assets/img/991779-min.jpg" alt="">
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+    </html>
