@@ -121,3 +121,11 @@ Las cuatro pseudoclases anteriores deben utilizarse en el orden que se muestran 
 
 - **::before | ::after** Contenido generado (debes generar contenido para que se visualice), por defecto con display inline (son como si fueran hijos).
 
+
+### Posicionamiento
+El posicionamiento como su nombre lo indica, nos permite colocar elementos en algun lugar determinado del DOM.
+
+- **Espacio reservado y flujo**
+- **Propiedades Offset** (top | right | bottom | left)
+- **Position Relative**
+- **Position Absolute**
