@@ -60,6 +60,7 @@ figure {
   justify-content: space-between;
   height: 70px;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .header a{
@@ -90,6 +91,7 @@ figure {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .hero-image{
@@ -110,6 +112,7 @@ figure {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .project-title {
@@ -133,11 +136,15 @@ figure {
 }
 
 .project-details {
-  width: 500px;
+  width: 50%;
 }
 
 .project-imageContainer {
-  width: 500px;
+  width: 50%;
+}
+
+.project-imageContainer img {
+  max-width: 100%;
 }
 
 
@@ -147,6 +154,7 @@ figure {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .footer img {
@@ -207,10 +215,13 @@ figure {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .container{
-  width: 1000px;
+  max-width: 1000px;
+  /* width: 100%; */
+  flex: 1;
   margin: 0 auto;
   display: inherit;
   justify-content: inherit;
@@ -276,14 +287,71 @@ figure {
 
 }
 
-@media screen and (max-width: 768px) {
-  body {
-    border: 10px solid lightcoral
+@media screen and (max-width: 767px) {
+  .header {
+    display: block;
+    height: auto;
   }
+
+  .header ol {
+    display: initial;
+  }
+
+  .header ol li {
+    height: 50px;
+  }
+
+  .header a {
+    justify-content: center;
+  }
+  .header .logo {
+    text-align: center;
+  }
+
+  .project {
+    display: block;
+  }
+
+  .project-imageContainer {
+    width: auto;
+    text-align: center;
+  }
+
+  .project-details {
+    width: auto;
+  }
+
+  .project-course, .project-date, .project-url {
+    margin: .4em 0;
+  }
+
+  .project-title {
+    font-size: 1.5em;
+  }
+
+  .project-url {
+    font-size: 1em;
+  }
+
+  .project-course {
+    font-size: .7em;
+  }
+
+  .project-date {
+    font-size: 1em;
+  }
+
+  .project-description {
+    font-size: .8em;
+  }
+
 }
 
 @media screen and (max-width: 480px) {
-
+  .project-details {
+    width: auto;
+    font-size: 12px;
+  }
 }
 
 @media screen and (max-width: 320px) {
