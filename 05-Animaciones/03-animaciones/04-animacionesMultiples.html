@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformación de punto de origen origen</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .piso {
+            background-color: transparent;
+            position: absolute;
+            bottom: 0;
+            width: 90%;
+            height: 0;
+            border-right: 70px solid transparent;
+            border-left: 70px solid transparent;
+            border-bottom: 150px solid rgb(247, 247, 247);
+            transform: rotateY(5deg);
+        }
+
+        .container {
+            border: 1px solid red;
+            width: 100%;
+            height: 309px;
+            position: relative;
+        }
+
+        .container:hover .cuadrado{
+            animation-play-state: paused;
+        }
+
+        .cuadrado {
+            width: 150px;
+            height: 150px;
+            background-color: #7dc900;
+            margin: 20px;
+            border-radius: 50%;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+
+            /* =================================== */
+            /* ==== Configurando la animación ==== */
+            /* =================================== */
+            animation-name: cuadrado, rebote; /* nombre de la animación */
+            animation-duration: 3s, 300ms; /* Tiempo en el cual se hara la animación */
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: linear, ease-in-out;
+        
+            /* animation-timing-function: cubic-bezier(.13,.01,.71,1.32); */
+
+            
+        }
+
+        /* Animacion del cuadrado*/
+        @keyframes cuadrado {
+            0% { /* Inicio */
+                left: 0;
+            }
+
+            100% { /* Fin */
+                left: calc(100% - 240px);
+            }
+        }
+
+        @keyframes rebote {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(100px) scale(1, .9);
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cuadrado">Hola mundo!</div>
+        <div class="piso"></div>
+    </div>
+    
+</body>
+</html>
