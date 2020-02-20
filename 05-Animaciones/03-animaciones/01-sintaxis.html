@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformación de punto de origen origen</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            border: 1px solid red;
+        }
+
+        .container:hover .cuadrado{
+            animation-play-state: paused;
+        }
+
+        .cuadrado {
+            width: 200px;
+            height: 200px;
+            background-color: #7dc900;
+            margin: 20px;
+
+            /* =================================== */
+            /* ==== Configurando la animación ==== */
+            /* =================================== */
+            animation-name: cuadrado; /* nombre de la animación */
+            animation-duration: 1.5s; /* Tiempo en el cual se hara la animación */
+            animation-delay: 1s; /* Espera el tiempo indicado para iniciar la animación */
+
+            /* =================================== */
+            /* Cuantas veces se repite la animación */
+            /* =================================== */
+            /*animation-iteration-count: 2;*/
+            animation-iteration-count: infinite;
+
+            /* =================================== */
+            /* ==== suavizado de la animación ==== */
+            /* =================================== */
+            animation-timing-function: ease;
+            /* animation-timing-function: ease-in; */
+            /* animation-timing-function: ease-out; */
+            /* animation-timing-function: ease-in-out; */
+            /* animation-timing-function: linear; sin suavizado */
+            /* animation-timing-function: cubic-bezier(1, 1, 1, 1); lineal */
+
+
+            /* =================================== */
+            /* indicar por donde inicia la animación*/
+            /* del 0% al 100% o del 100% al 0%     */
+            /* ================================== */
+
+            /* animation-direction: normal; por defecto */
+            /* animation-direction: reverse; del 100% al 0% */
+            /* animation-direction: alternate; */
+
+            /* como es que quiero que se quede el elemento al finalizar la animación*/
+            animation-fill-mode: forwards; /* termina con las propiedades que termina la nimación */
+
+            /* ======================= */
+            /* Estado de la animación */
+            /* ======================= */
+            /* animation-play-state: running; defecto */
+            /* animation-play-state: paused; */
+
+            
+        }
+
+        /* Animacion del cuadrado*/
+        @keyframes cuadrado {
+            /*Se pueden configurar lo que haga en cada porcentaje del tiempo transcurrido*/
+            0% { /* Inicio */
+                opacity: 1;
+            }
+
+            100% { /* Fin */
+                opacity: 0;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cuadrado">Hola mundo!</div>
+    </div>
+    
+</body>
+</html>

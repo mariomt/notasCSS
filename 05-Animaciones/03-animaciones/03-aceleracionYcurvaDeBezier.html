@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformación de punto de origen origen</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            border: 1px solid red;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .container:hover .cuadrado{
+            animation-play-state: paused;
+        }
+
+        .cuadrado {
+            width: 200px;
+            height: 200px;
+            background-color: #7dc900;
+            margin: 20px;
+            border-radius: 50%;
+            
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+
+            /* =================================== */
+            /* ==== Configurando la animación ==== */
+            /* =================================== */
+            animation-name: cuadrado; /* nombre de la animación */
+            animation-duration: 2s; /* Tiempo en el cual se hara la animación */
+            animation-delay: 1s; /* Espera el tiempo indicado para iniciar la animación */
+            /* animation-iteration-count: infinite; */
+            /* animation-direction: alternate; */
+
+            /*animation-timing-function: ease-in;*/ /* hace que rebote rapido a la derecha de la caja*/
+            /*animation-timing-function: ease-out;*/ /* hace que rebote rapido a la izquierda de la caja*/
+            /*animation-timing-function: ease-in-out;*/ /* hace que el rebote sea suave por ambos lados*/
+            /* animation-timing-function: steps(5); */
+            animation-timing-function: cubic-bezier(.13,.01,.71,1.32);
+            animation-fill-mode: forwards;
+
+            
+        }
+
+        /* Animacion del cuadrado*/
+        @keyframes cuadrado {
+            0% { /* Inicio */
+                left: 0;
+            }
+
+            100% { /* Fin */
+                left: calc(100% - 240px);
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cuadrado">Hola mundo!</div>
+    </div>
+    
+</body>
+</html>
