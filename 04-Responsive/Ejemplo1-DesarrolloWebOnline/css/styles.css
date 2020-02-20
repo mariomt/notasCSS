@@ -322,7 +322,6 @@ figure {
   width: 100px;
   border-radius: 5px;
   margin-top: 10px;
-  /* margin: 10px auto 0; */
 }
 
 .form-email h3 {
@@ -330,6 +329,11 @@ figure {
 }
 
 @media screen and (max-width: 1023px) {
+.html-video {
+  width: 100%;
+  height: auto;
+}
+
   .container {
     padding: 0 1em;
   }
